@@ -71,6 +71,13 @@ header button {
     margin: 5px;
     width: 75px;
 }
+.fav-meals li:hover {
+    cursor: pointer;
+    position: relative;
+    margin: 5px;
+    width: 75px;
+    transform: scale(1.1); 
+}
 
 .fav-meals li .clear {
     background-color: transparent;
@@ -151,8 +158,17 @@ header button {
     font-size: 1.2rem;
 }
 
+.meal-body .fav-btn:hover {
+    color: rgb(82, 82, 82);
+    transform: scale(1.2); 
+}
 .meal-body .fav-btn.active {
     color: rebeccapurple;
+}
+
+.meal-body .fav-btn.active:hover {
+    color: rgb(143, 104, 184);
+    transform: scale(1.2);
 }
 
 .popup-container {
@@ -195,4 +211,13 @@ header button {
 
 .meal-info h1 {
     text-align: center;
+}
+
+.search-button{
+    cursor: pointer;
+}
+
+.search-button:hover{
+    color: #0000002f;
+    transform: scale(1.2);
 }
