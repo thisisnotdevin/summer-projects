@@ -20,6 +20,10 @@ img {
     max-width: 100%;
 }
 
+.search-bar:hover{
+    background-color: rgb(228, 228, 228);
+}
+
 .mobile-container {
     background-color: #fff;
     box-shadow: 0 0 10px 2px #3333331a;
@@ -113,7 +117,7 @@ header button {
 }
 
 .meal {
-    border-radius: 3px;
+    border-radius: 7px;
     box-shadow: 0 0 10px 2px #3333331a;
     cursor: pointer;
     margin: 1.5rem;
@@ -123,7 +127,9 @@ header button {
 .meal-header {
     position: relative;
 }
-
+.meal:hover {
+    transform: scale(0.97);
+}
 .meal-header .random {
     position: absolute;
     top: 1rem;
