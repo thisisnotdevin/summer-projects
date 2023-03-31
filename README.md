@@ -5,7 +5,7 @@ I will most likely be creating user interface designs
 
 click on the links below (no virus ;))
 
-- [Recipes App](https://htmlpreview.github.io/?https://github.com/thisisnotdevin/summer-projects/blob/master/recipe-app/index.html)
+- [Recipes App](https://htmlpreview.github.io/?https://github.com/thisisnotdevin/summer-projects/blob/main/recipe-app/index.html)
 - [Movie App](https://htmlpreview.github.io/?https://github.com/thisisnotdevin/summer-projects/blob/master/movie-app/index.html)
 - [Quiz App](https://htmlpreview.github.io/?https://github.com/thisisnotdevin/summer-projects/blob/master/quiz-app/index.html)
 
