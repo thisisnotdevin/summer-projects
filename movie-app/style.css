@@ -3,7 +3,10 @@
 * {
     box-sizing: border-box;
 }
-
+.title {
+    padding-left: 45%;
+    color: white;
+}
 body {
     background-color: #22254b;
     font-family: "Poppins", sans-serif;
