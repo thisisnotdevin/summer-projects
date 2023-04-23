@@ -8,15 +8,16 @@
     color: white;
 }
 body {
-    background-color: #22254b;
+    background-color: #0c113f;
     font-family: "Poppins", sans-serif;
     margin: 0;
 }
 
 header {
-    background-color: #373b69;
+    background-color: #0c113f;
+    border: 1px solid #c348f8;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 1rem;
 }
 
@@ -27,6 +28,7 @@ header {
     color: #fff;
     font-family: inherit;
     font-size: 1rem;
+    width: 500px;
     padding: 0.5rem 1rem;
 }
 
@@ -42,6 +44,8 @@ header {
 main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .movie {
