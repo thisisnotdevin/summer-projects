@@ -99,3 +99,26 @@ submitBtn.addEventListener("click", () => {
 
   
 })
+// Create a button with id "create-quiz" in your HTML file
+const createQuizBtn = document.getElementById("create-quiz");
+
+// Add event listener to the button
+createQuizBtn.addEventListener("click", () => {
+  // Prompt the user to enter the new question, options, and answer
+  const question = prompt("Enter the new question:");
+  const a = prompt("Enter option A:");
+  const b = prompt("Enter option B:");
+  const c = prompt("Enter option C:");
+  const d = prompt("Enter option D:");
+  const correct = prompt("Enter the correct answer (a, b, c, or d):");
+
+  // Add the new question to the quizData array
+  quizData.push({
+    question: question,
+    a: a,
+    b: b,
+    c: c,
+    d: d,
+    correct: correct,
+  });
+});

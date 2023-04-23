@@ -68,7 +68,7 @@ button{
     padding: 1.3rem;
 }
 button:hover {
-    background-color: rgba(0, 128, 128, 0.712);
+    background-color: rgba(0, 128, 128, 0.808);
 }
 button:active {
     background-color: teal;
@@ -132,7 +132,7 @@ button:active {
 }
 .menu button {
     margin: 1rem;
-    background: rgb(0, 153, 153);
+    background: teal;
     box-shadow:  8px 8px 0px #d2d2bc,
                  -8px -8px 0px #ffffff;
     cursor: pointer;
@@ -146,7 +146,7 @@ button:active {
     }
 
 .menu button:hover {
-background-color: rgba(0, 128, 128, 0.712);
+background-color: rgba(0, 128, 128, 0.808);
 }
 .menu button:active {
 background-color: teal;
