@@ -39,17 +39,20 @@ const quizData = [
 const quiz = document.getElementById("quiz");
 const answerEls = document.querySelectorAll(".answer");
 const questionEl = document.getElementById("question");
+
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
 const d_text = document.getElementById("d_text");
 const submitBtn = document.getElementById("submit");
-
+const questionContainer = document.getElementById("question-container");
 let currentQuiz = 0;
 let score = 0;
 
 loadQuiz();
-
+for (let i = 0; i < quizData.length; i++) {
+    loadQuestions(i);
+}
 function loadQuiz() {
     deselectAnswers();
     const currentQuizData = quizData[currentQuiz];
@@ -99,12 +102,11 @@ submitBtn.addEventListener("click", () => {
 
   
 })
-// Create a button with id "create-quiz" in your HTML file
+
 const createQuizBtn = document.getElementById("create-quiz");
 
-// Add event listener to the button
 createQuizBtn.addEventListener("click", () => {
-  // Prompt the user to enter the new question, options, and answer
+  
   const question = prompt("Enter the new question:");
   const a = prompt("Enter option A:");
   const b = prompt("Enter option B:");
@@ -112,7 +114,7 @@ createQuizBtn.addEventListener("click", () => {
   const d = prompt("Enter option D:");
   const correct = prompt("Enter the correct answer (a, b, c, or d):");
 
-  // Add the new question to the quizData array
+  
   quizData.push({
     question: question,
     a: a,
@@ -122,3 +124,41 @@ createQuizBtn.addEventListener("click", () => {
     correct: correct,
   });
 });
+const editQuizBtn = document.getElementById("edit-quiz");
+
+editQuizBtn.addEventListener("click", () => {
+  
+  const questionNumber = parseInt(prompt("Enter the question number you want to edit:"));
+
+  if (questionNumber && questionNumber > 0 && questionNumber <= quizData.length) {
+    const currentQuizData = quizData[questionNumber - 1];
+    
+   
+    const updatedQuestion = prompt("Enter the updated question:", currentQuizData.question);
+    const updatedA = prompt("Enter answer A:", currentQuizData.a);
+    const updatedB = prompt("Enter answer B:", currentQuizData.b);
+    const updatedC = prompt("Enter answer C:", currentQuizData.c);
+    const updatedD = prompt("Enter answer D:", currentQuizData.d);
+    
+
+    quizData[questionNumber - 1] = {
+      question: updatedQuestion,
+      a: updatedA,
+      b: updatedB,
+      c: updatedC,
+      d: updatedD,
+      correct: currentQuizData.correct
+    };
+    
+   
+    loadQuiz();
+  } else {
+    alert("Invalid question number!");
+  }
+});
+function loadQuestions(currentQuiz) {
+    const currentQuizData = quizData[currentQuiz];
+    const questionText = document.createElement("p");
+    questionText.innerText = (currentQuiz + 1) + ". " + currentQuizData.question;
+    questionContainer.appendChild(questionText);
+}
